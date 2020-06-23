@@ -186,3 +186,20 @@ blockquote cite:before {content:"- ";}
 .timeline li:nth-child(odd) .timeline_step_marker {border-color:#007bff;}
 .timeline .row [class*="col-"]:nth-child(odd) .timeline li:nth-child(odd) .timeline_step_marker {border-color:#dc3545;}
 .timeline .row [class*="col-"]:nth-child(odd) .timeline li:nth-child(even) .timeline_step_marker {border-color:#007bff;}
+
+/* On-Scroll Mobile Navigation Shenanigans*/
+.mobile-nav:before {content:""; width:100%; height:100%; background-color:#fff; left:0; position:absolute; z-index:-1;}
+.mobile-nav {-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.47, 0, 0.75, 0.72); -moz-transition: -moz-transform 0.5s  cubic-bezier(0.47, 0, 0.75, 0.72); transition: transform 0.5s  ease-in-out; }
+.mobile-nav.scroll-down {  -webkit-transform: translateY(100%);  -moz-transform: translateY(100%);  -ms-transform: translateY(100%);  -o-transform: translateY(100%); transform: translateY(100%); }
+
+/* Knockout Logo Section */
+/*.mobile-nav .logo-knockout {z-index:-20; opacity:0; -webkit-transition: opacity .75s cubic-bezier(0.47, 0, 0.75, 0.72); -moz-transition: opacity .75s cubic-bezier(0.47, 0, 0.75, 0.72); transition: opacity .75s cubic-bezier(0.47, 0, 0.75, 0.72);}
+.mobile-nav .logo-knockout.fixed-top {opacity:1; -webkit-transition: opacity .75s cubic-bezier(0.47, 0, 0.75, 0.72); -moz-transition: opacity .75s cubic-bezier(0.47, 0, 0.75, 0.72); transition: opacity .75s cubic-bezier(0.47, 0, 0.75, 0.72); }
+.mobile-nav.scroll-down .logo-knockout {display:none;}*/
+
+/* Hamburger Styling */
+.mobile-nav .navbar-toggler:after { content: "Menu"; font-size: 14px; display: block;}
+.mobile-nav .navbar-toggler-icon { width: 1.22em !important; height: 1.22em !important;}
+@media(max-width:400px){.mobile-nav .side-ctas a { font-size:10px; }}
+
+				
